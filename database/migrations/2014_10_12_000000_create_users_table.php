@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('password')->nullable(); // not required when using OAuth
             $table->string('avatar')->nullable();
             $table->string('occupation')->nullable();
-            $table->string('is_admin')->default(false);
+            $table->boolean('is_admin')->default(false);
             $table->rememberToken(); // on login will updated
             $table->timestamps(); // will create created_at & updated_at. These field will autofilled on addition/change
             $table->softDeletes(); // for deleted_at
